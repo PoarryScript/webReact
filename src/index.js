@@ -14,13 +14,37 @@ import FlavorForm from './components/FlavorForm';
 import Reservation from './components/Reservation ';
 import Calculator from './components/Calculator';
 import CalculatorSuper from './components/CalculatorSuper';
+import Contacts from './components/Contacts';
+import "./css/dialog.scss";
+import "./css/Panel.scss";
 
+function SplitPanel(props) {
+  return (<div className="SplitPane">
+    <div className="SplitPane-left">
+      {props.left}
+    </div>
+    <div className="SplitPane-right">{props.right}</div>
+  </div>);
+}
 
+function FancyBorder(props) {
+  return (<div className={'FancyBorder FancyBorder-' + props.color}>
+    {props.children}
+  </div>);
+}
+
+function WelcomeDialog() {
+  return (<FancyBorder color="blue">
+    <h1 className='Dialog-title'>Welcome </h1>
+    <p className="Dialog-message"> Thank you for visiting our spacecraft!</p>
+  </FancyBorder>);
+}
 
 function TestPropos(props) {
 
   return <h1>fun propos={props.name}</h1>
 }
+
 function Clock(props) {
 
   return (<div><h1>Hello,World,</h1>
@@ -50,11 +74,21 @@ function Mailbox(props) {
 }
 const messgaes = ['React', 'Re:React', 'ReLre :React'];
 
+function CharPanel() {
+  return <div className="Chat"><fieldset><label><h1>CharPanel</h1><br />kshaksdhaksdasdkjasd</label></fieldset></div>;
+}
+
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 const listItems = numbers.map((number) => <li key={number}>{number}</li>);
 function tick() {
   const element = <div>
 
+    <br /> <br />
+    <SplitPanel left={<Contacts className="Contacts" />} right={<CharPanel />} />
+    <br /> <br />
+    <br /> <br /><br /> <br />
+    <br /> <br />
+    <WelcomeDialog />
     <br /> <br />
     <CalculatorSuper />
     <br /> <br />
