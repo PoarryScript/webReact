@@ -18,6 +18,16 @@ import Contacts from './components/Contacts';
 import "./css/dialog.scss";
 import "./css/Panel.scss";
 
+
+function Dialog(props) {
+  return (<FancyBorder color="blue"><h1 className="Dialog-title">{props.title}</h1>
+    <p className="Dialog-message">{props.message}</p>
+  </FancyBorder>);
+}
+function CombinationDialog() {
+  return (<Dialog title="Combination Dialog" message="Test for Combination message" />);
+}
+
 function SplitPanel(props) {
   return (<div className="SplitPane">
     <div className="SplitPane-left">
@@ -41,7 +51,6 @@ function WelcomeDialog() {
 }
 
 function TestPropos(props) {
-
   return <h1>fun propos={props.name}</h1>
 }
 
@@ -83,6 +92,9 @@ const listItems = numbers.map((number) => <li key={number}>{number}</li>);
 function tick() {
   const element = <div>
 
+    <br /> <br />
+    <br /> <br />
+    <CombinationDialog />
     <br /> <br />
     <SplitPanel left={<Contacts className="Contacts" />} right={<CharPanel />} />
     <br /> <br />
