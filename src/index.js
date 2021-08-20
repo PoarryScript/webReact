@@ -13,6 +13,7 @@ import EasyForm from './components/EasyForm';
 import FlavorForm from './components/FlavorForm';
 import Reservation from './components/Reservation ';
 import Calculator from './components/Calculator';
+import CalculatorSuper from './components/CalculatorSuper';
 
 
 
@@ -53,7 +54,9 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
 const listItems = numbers.map((number) => <li key={number}>{number}</li>);
 function tick() {
   const element = <div>
-    
+
+    <br /> <br />
+    <CalculatorSuper />
     <br /> <br />
     <Calculator />
     <br /> <br />
