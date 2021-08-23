@@ -17,6 +17,8 @@ import CalculatorSuper from './components/CalculatorSuper';
 import Contacts from './components/Contacts';
 import "./css/dialog.scss";
 import "./css/Panel.scss";
+import SignUpDialog from './components/SignUpDialog';
+import ChangeList from './components/ChangeList';
 
 
 function Dialog(props) {
@@ -93,6 +95,10 @@ function tick() {
   const element = <div>
 
     <br /> <br />
+    <br /> <br />
+    <ChangeList />
+    <br /> <br />
+    <SignUpDialog />
     <br /> <br />
     <CombinationDialog />
     <br /> <br />
