@@ -22,6 +22,7 @@ import SignUpDialog from './components/SignUpDialog';
 import ChangeList from './components/ChangeList';
 import AnimationTest from './components/AnimationTest';
 import KeyFrameTest from './components/KeyFrameTest';
+import HomePage from './components/HomePage';
 
 
 function Dialog(props) {
@@ -98,6 +99,8 @@ function tick() {
   const element = <Fragment>
 
     <br /> <br />
+    <br /> <br />
+    <HomePage />
     <br /> <br />
     <KeyFrameTest/>
     <br /> <br />

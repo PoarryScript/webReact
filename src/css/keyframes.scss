@@ -1,37 +1,36 @@
-.showTest{
+.showTest {
     animation: show-item 2s ease-in forwards;
 }
 
-.hideTest{
-
+.hideTest {
     animation: hide-item 2s ease-in forwards;
 }
 
-@keyframes hide-item{
-    0%{
+@keyframes hide-item {
+    0% {
         opacity: 1;
         color: aquamarine;
     }
-    50%{
+    50% {
         opacity: 0.5;
         color: burlywood;
     }
-    100%{
+    100% {
         opacity: 0;
         color: aqua;
     }
 }
 
-@keyframes show-item{
-    0%{
+@keyframes show-item {
+    0% {
         opacity: 0;
         color: aquamarine;
     }
-    50%{
+    50% {
         opacity: 0.5;
         color: burlywood;
     }
-    100%{
+    100% {
         opacity: 1;
         color: aqua;
     }
