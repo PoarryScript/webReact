@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -19,6 +20,7 @@ import "./css/dialog.scss";
 import "./css/Panel.scss";
 import SignUpDialog from './components/SignUpDialog';
 import ChangeList from './components/ChangeList';
+import AnimationTest from './components/AnimationTest';
 
 
 function Dialog(props) {
@@ -92,9 +94,11 @@ function CharPanel() {
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 const listItems = numbers.map((number) => <li key={number}>{number}</li>);
 function tick() {
-  const element = <div>
+  const element = <Fragment>
 
     <br /> <br />
+    <br /> <br />
+    <AnimationTest />
     <br /> <br />
     <ChangeList />
     <br /> <br />
@@ -139,7 +143,7 @@ function tick() {
     <br /> <br />
 
 
-    <h2>It is {new Date().toLocaleTimeString()}.</h2></div>
+    <h2>It is {new Date().toLocaleTimeString()}.</h2></Fragment>
 
   ReactDOM.render(
     element,
